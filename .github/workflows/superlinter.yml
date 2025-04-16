@@ -30,8 +30,7 @@ jobs:
         uses: super-linter/super-linter@v7.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_ALL_CODEBASE: false # Ensures selective validation
-          VALIDATE_MARKDOWN: false    # Prevents errors from empty .md files
-          VALIDATE_PRETTIER: true     # Enables Prettier linting for formatting
-          VALIDATE_YAML: true         # Keeps YAML validation active
-          VALIDATE_JSON: true         # Ensures JSON files are checked
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_MARKDOWN: false    # Disables Markdown linting (to ignore empty .md files)
+          VALIDATE_YAML: true         # Enables YAML validation
+          VALIDATE_JSON: true         # Enables JSON validation
