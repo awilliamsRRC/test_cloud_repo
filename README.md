@@ -12,12 +12,14 @@ This GitHub Actions workflow automates code linting using [Super-Linter](https:/
 ## Configuration
 
 The workflow is defined in `.github/workflows/lint.yml` with the following steps:
+
 1. **Checkout Code** – Retrieves the repository's full git history.
 2. **Run Super-Linter** – Executes linting checks on the modified files.
 
 ## Usage
 
 To trigger the linter manually:
+
 1. Push changes to the `dev` branch.
 2. Open a pull request targeting `dev`.
 3. Review linting results under **GitHub Actions** or **Status Checks**.
@@ -31,4 +33,4 @@ You can modify the linter rules by adjusting the `.github/workflows/lint.yml` fi
 - [Super-Linter Documentation](https://github.com/github/super-linter)
 - [GitHub Actions Guide](https://docs.github.com/en/actions)
 
-This workflow helps streamline code quality checks and improve collaboration. Let me know if you need any further adjustments.
+This workflow helps streamline code quality checks and improve collaboration.
