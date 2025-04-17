@@ -8,31 +8,25 @@ on:
     branches:
       - dev
 
-permissions:
-  contents: read
-  packages: read
-  statuses: write
+permissions: {}
 
 jobs:
-  lint:
-    name: Lint Codebase
+  build:
+    name: Lint
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Run Super-Linter
+      - name: Super-linter
         uses: super-linter/super-linter@v7.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Use selective validation
-          VALIDATE_ALL_CODEBASE: false
-          # Disable Markdown and Prettier validations to bypass errors
-          VALIDATE_MARKDOWN: false
-          VALIDATE_PRETTIER: false
-          # Enable other validations as needed
-          VALIDATE_YAML: true
-          VALIDATE_JSON: true
