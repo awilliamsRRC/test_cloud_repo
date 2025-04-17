@@ -1,1 +1,1 @@
-# Test Linting Workflow for `dev` Branch
+# Linting Workflow for `dev` Branch.
